@@ -5,4 +5,4 @@ Event.Single - значение выдается только 1 раз, посл
 Event.State - наследутся от Event.Single и имеет метод изменения состояния. После изменения -> Event.Single\
 Event.Change - то же самое, что и Event.State, только значение можно менять
 
-В observe нужно вызвать getContentOrNot(), чтобы не словить null
+В observe нужно вызвать getContentOrNot() и передать блок кода, который нужно выполнить
