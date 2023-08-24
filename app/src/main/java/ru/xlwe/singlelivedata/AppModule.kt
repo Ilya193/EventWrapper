@@ -10,7 +10,7 @@ val appModule = module {
         )
     }
 
-    factory<BaseSingleCommunication<Event.State<String>, Event.State<String>>> {
-        BaseSingleCommunication<Event.State<String>, Event.State<String>>()
+    factory<BaseSingleCommunication<EventWrapper.State<String>, EventWrapper.State<String>>> {
+        BaseSingleCommunication<EventWrapper.State<String>, EventWrapper.State<String>>()
     }
 }

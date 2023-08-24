@@ -37,29 +37,3 @@ class BaseSingleCommunication<T: Any, R: Any> :
     }
 }
 
-interface Event<T> {
-    fun getContentOrNot(): T?
-
-    open class Single<T>(protected var data: T) : Event<T> {
-        protected var enabled = false
-
-        override fun getContentOrNot(): T? {
-            return if (enabled) null else {
-                enabled = true
-                data
-            }
-        }
-    }
-
-    open class State<T>(data: T) : Single<T>(data) {
-        fun setState(value: Boolean) {
-            enabled = value
-        }
-    }
-
-    class Change<T>(data: T) : State<T>(data) {
-        fun setValue(value: T) {
-            data = value
-        }
-    }
-}
